@@ -1,21 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Eval;
 
-/**
- *
- * @author jules.rachet
- */
+import java.util.Scanner;
+
+
 public class Q1 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+// Calcule et écrit tous les entiers pairs à partir de [n jusqu'à n +10[
+    //Variable
+        int Nb;
+        int i;
+    //Constantes
+        final int Even;
 
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Entrer un entier positif n pour afficher les entiers sur l'intervalle [n, n+10[: ");
+        Nb = reader.nextInt();
+
+        Even = Nb +10;
+
+        for (i = 0; Nb < Even; i++)
+        {
+            if (Nb % 2 == 0)
+            {
+               System.out.printf("La nombre pair #%d de la serie est : %d  \n", i, Nb);
+               Nb += 2;
+            }
+            else
+                Nb += 1;
+        }
+    }
 }
